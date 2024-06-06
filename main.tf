@@ -39,7 +39,7 @@ resource "aws_instance" "app" {
               systemctl start docker
               systemctl enable docker
               usermod -aG docker ubuntu
-              docker run -d -p 80:80 --name flaskapp <your_dockerhub_username>/my-flask-app:latest
+              docker run -d -p 80:80 --name flaskapp vsheik56/my-flask-app:latest
               EOF
 
   tags = {
